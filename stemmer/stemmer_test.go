@@ -1,4 +1,4 @@
-package tfidf
+package stemmer
 
 import (
 	"fmt"
@@ -13,10 +13,11 @@ func TestStem(t *testing.T) {
 		{word: "beliebtester", stem: "belieb"},
 		{word: "stören", stem: "stö"},
 		{word: "stöhnen", stem: "stöh"},
+		{word: "geliebt", stem: "lieb"},
 	}
 
 	for _, test := range testCases {
-		stem := stem(test.word)
+		stem := Stem(test.word)
 		fmt.Println(stem)
 	}
 }
