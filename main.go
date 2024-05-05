@@ -1,4 +1,4 @@
-package main
+package tfidf
 
 import (
 	"cmp"
